@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogOut, Plus, Edit2, Trash2, ExternalLink, Image, FolderKanban, X, PlusCircle, Check, GitBranch, Briefcase, Zap } from "lucide-react";
 
-const API = "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL;
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState("projects");

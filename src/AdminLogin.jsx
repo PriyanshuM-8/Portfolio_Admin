@@ -25,7 +25,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     const endpoint = isRegistering ? "/api/auth/register" : "/api/auth/login";
-    const API_URL = `http://localhost:5000${endpoint}`;
+    const API_URL = `${import.meta.env.VITE_API_URL}${endpoint}`;
 
     try {
       const res = await fetch(API_URL, {
